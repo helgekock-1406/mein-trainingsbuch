@@ -1,1 +1,31 @@
+name: Android APK erstellen
 
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Projekt laden
+        uses: actions/checkout@v4
+      - name: Java 17 einrichten
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Gradle 8.9 einrichten
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.9'
+      - name: Android Debug APK bauen
+        run: gradle --no-daemon :app:assembleDebug
+      - name: APK zum Herunterladen bereitstellen
+        uses: actions/upload-artifact@v4
+        with:
+          name: Mein-Trainingsbuch-APK
+          path: app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
