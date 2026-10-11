@@ -1,0 +1,14 @@
+Mein Trainingsbuch – Version 2
+
+Neu:
+- Eingabe und Anzeige neuer Trainingsgewichte in Pfund (lb).
+- Vorbelegung aus der zuletzt gespeicherten Einheit pro Übung.
+- Ab 15 Wiederholungen im ersten Satz: 5 % Steigerung, auf die nächstkleinere gerade Pfundzahl abgerundet.
+- Bei Übungen mit zwei Sätzen wird dasselbe vorgeschlagene Gewicht in beiden Sätzen eingetragen.
+- Manuelle Anpassungen bleiben möglich.
+- Die alten Speicher-Schlüssel und die Android-App-ID bleiben erhalten.
+- versionCode 2 für ein Update über die bestehende Installation.
+
+Hinweis: Vor einer Installation eine JSON-Sicherung in der bestehenden App erstellen.
+Ein vorhandener alter Trainingsverlauf mit kg bleibt als solcher gekennzeichnet.
+Die automatische Gewichtsübernahme ist für neu in lb gespeicherte Einheiten gedacht.
