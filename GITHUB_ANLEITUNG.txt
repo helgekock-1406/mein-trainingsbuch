@@ -1,0 +1,16 @@
+MEIN TRAININGSBUCH – APK mit GitHub Actions erstellen
+
+1. Auf einem Computer https://github.com aufrufen und anmelden (oder kostenlos registrieren).
+2. Oben rechts + > New repository. Name z.B. mein-trainingsbuch. PRIVATE auswählen und Repository erstellen.
+3. Diese ZIP-Datei auf dem Computer ENTpacken. Im neuen GitHub-Repository „uploading an existing file“ anklicken (ggf. Add file > Upload files).
+4. Alle Dateien und Ordner AUS dem entpackten Verzeichnis hochladen, einschließlich des versteckten Ordners .github. Die Datei .github/workflows/android-apk.yml muss im Repository vorhanden sein. Auf Windows ggf. Anzeige versteckter Dateien aktivieren. Änderungen unten mit Commit changes bestätigen.
+5. Im Repository den Reiter Actions öffnen. Links „Android APK erstellen“ auswählen, dann „Run workflow“ und erneut „Run workflow“.
+6. Nach erfolgreichem Lauf auf den Lauf klicken und unten unter Artifacts „Mein-Trainingsbuch-APK“ herunterladen.
+7. Die heruntergeladene ZIP entpacken. Darin befindet sich app-debug.apk. Auf das Samsung übertragen und öffnen. Android fragt ggf. nach der Erlaubnis, Apps aus dieser Quelle zu installieren. Nur für deine selbst erstellte, vertrauenswürdige APK erlauben.
+
+HINWEISE:
+- Dies ist eine Debug-APK zum privaten Testen, keine signierte Release-Version für den Play Store.
+- Der erste GitHub-Build wurde hier nicht ausgeführt; eventuelle Build-Fehler sind daher noch möglich.
+- Trainingsdaten bleiben lokal in der App. Vor einer Neuinstallation oder einem Gerätewechsel JSON-Sicherung exportieren.
+- Der Gradle-Workflow benötigt Internetzugang auf GitHub zum Herunterladen der Build-Abhängigkeiten.
+- Keine persönlichen Trainingsdaten in GitHub hochladen, nur den App-Quellcode.
